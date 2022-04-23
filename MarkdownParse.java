@@ -25,7 +25,7 @@ public class MarkdownParse {
         return toReturn;
     }
 
-
+/*
     public static void main(String[] args) throws IOException {
         Path fileName = Path.of(args[0]);
         String content = Files.readString(fileName);
@@ -33,4 +33,5 @@ public class MarkdownParse {
 	    System.out.println(links);
         System.out.println("fin.");
     }
+*/
 }
