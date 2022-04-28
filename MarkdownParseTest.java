@@ -11,9 +11,10 @@ public class MarkdownParseTest {
 
     @Test
     public void addition() {
-        assertEquals(2, 1 + 1);
+        assertEquals(2, 2 + 1); //failing test
     }
 
+    /*
     @Test
     public void getLinks() throws IOException {
         Path filePath = Path.of("test-file.md");
@@ -34,6 +35,7 @@ public class MarkdownParseTest {
 
 
     }
+*/
 
 }
 
