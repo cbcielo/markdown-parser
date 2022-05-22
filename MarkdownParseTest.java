@@ -14,6 +14,38 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1); //passing test 
     }
 
+    @Test
+    public void snippetCheck1() throws IOException {
+        Path fileName = Path.of("snippet1.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> output = new ArrayList<String>();
+    }
+
+    @Test
+    public void snippetCheck2() throws IOException {
+        Path fileName = Path.of("snippet2.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+        ArrayList<String> output = new ArrayList<String>();
+        output.add("b.com");
+        output.add("a.com(())");
+        output.add("example.com");
+
+        assertEquals(output, links);
+
+    }
+
+    @Test
+    public void snippetCheck3() throws IOException {
+        Path fileName = Path.of("snippet3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> links = MarkdownParse.getLinks(content);
+
+        assertEquals(List.of("https://www.twitter.com", "https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule", 
+        "https://cse.ucsd.edu"), links);
+    }
+
     /*
     @Test
     public void getLinks() throws IOException {
@@ -36,6 +68,8 @@ public class MarkdownParseTest {
 
     }
 */
+
+
 
 }
 
